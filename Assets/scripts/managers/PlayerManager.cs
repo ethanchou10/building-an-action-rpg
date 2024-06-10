@@ -29,4 +29,14 @@ public class PlayerManager : MonoBehaviour, IGameManager {
 
 		Debug.Log("Health: " + health + "/" + maxHealth);
 	}
+
+	public void Respawn() {
+		Debug.Log("Respawning...");
+		UpdateData(50, 100);
+	}
+
+	public void UpdateData(int health, int maxHealth) {
+		this.health = health;
+		this.maxHealth = maxHealth;
+	}
 }

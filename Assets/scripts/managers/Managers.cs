@@ -14,7 +14,7 @@ public class Managers : MonoBehaviour {
 	private List<IGameManager> _startSequence;
 	
 	void Awake() {
-		DontDestroyOnLoad(gameObject);
+		DontDestroyOnLoad(this.gameObject);
 
 		Player = GetComponent<PlayerManager>();
 		Inventory = GetComponent<InventoryManager>();

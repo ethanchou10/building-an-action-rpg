@@ -21,6 +21,7 @@ public class MissionManager : MonoBehaviour, IGameManager {
 
 	public void GoToNext() {
 		if (curLevel < maxLevel) {
+			Debug.Log("Current Level " + curLevel);
 			curLevel++;
 			string name = "Level" + curLevel;
 			Debug.Log("Loading " + name);
@@ -28,5 +29,9 @@ public class MissionManager : MonoBehaviour, IGameManager {
 		} else {
 			Debug.Log("Last level");
 		}
+	}
+
+	public void ReachObjective() {
+		Messenger.Broadcast(GameEvent.LEVEL_COMPLETE);
 	}
 }
